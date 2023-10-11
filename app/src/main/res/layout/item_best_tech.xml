@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/mGreen"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/workerImg"
+                android:layout_width="70dp"
+                android:layout_height="170dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/worker" />
+
+
+            <TextView
+                android:id="@+id/catTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:text="Graphic Designer"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salman Azhar"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/catTxt"/>
+
+<!--            <RatingBar-->
+<!--                android:id="@+id/ratingBar"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:numStars="5"-->
+<!--                android:stepSize="1"-->
+<!--                android:rating="3.5"-->
+<!--                android:padding="-55dp"-->
+<!--                android:layout_marginStart="-64dp"-->
+<!--                android:layout_marginTop="-12dp"-->
+<!--                android:layout_marginBottom="-30dp"-->
+<!--                android:layout_below="@id/nameTxt"-->
+<!--                android:scaleX="0.35"-->
+<!--                android:progressTint="#FFC107"-->
+<!--                android:scaleY="0.35" />-->
+
+            <TextView
+                android:id="@+id/tagTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTxt"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toLeftOf="@id/workerImg"
+                android:text="We are always here to serve our  best clients"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameTxt" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

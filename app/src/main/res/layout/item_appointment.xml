@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/techImage"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/userprofile"
+            app:riv_border_color="#33BFBFBF"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="60dip"
+            app:riv_mutate_background="true" />
+
+        <TextView
+            android:id="@+id/techName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="client name"
+            android:layout_toRightOf="@id/techImage"
+            android:layout_marginTop="14dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/techPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone No."
+            android:layout_toRightOf="@id/techImage"
+            android:layout_marginTop="34dp"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/orderDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="text\ntext\ntext"
+            android:minLines="3"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:maxLines="3"
+            android:layout_below="@id/techImage"
+            android:padding="0dp" />
+
+        <TextView
+            android:id="@+id/orderDate"
+            android:layout_below="@id/orderDescription"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="28dp"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"
+            android:layout_height="wrap_content"
+            android:text="August 02, 2023" />
+
+        <Button
+            android:id="@+id/actionBtn"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Reviewed"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/orderDescription" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

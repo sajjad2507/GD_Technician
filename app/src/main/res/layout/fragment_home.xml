@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/homeDigital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toLeftOf="@id/homeNotification"
+                android:text="DG"
+                android:textColor="#5E5E5E"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/homeTechnician"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeDigital"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toLeftOf="@id/homeNotification"
+                android:text="Technician"
+                android:textColor="#292929"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/homeNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:visibility="invisible"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/notif" />
+
+            <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                android:id="@+id/bestTechRcv"
+                android:layout_width="wrap_content"
+                android:layout_height="216dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/homeTechnician"
+                android:layout_marginTop="16dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/bestTechRcv">
+
+                <TextView
+                    android:id="@+id/CategoryTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Categories"
+                    android:textColor="#616161"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/techCatRcv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="90dp"
+                    android:paddingEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/CategoryTxt" />
+
+                <TextView
+                    android:id="@+id/homeSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="see all"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/appointmentTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Recent Appointments"
+                    android:textColor="#616161"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/techCatRcv" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/appointmentRcv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="90dp"
+                    android:paddingEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/appointmentTxt" />
+
+                <TextView
+                    android:id="@+id/appointmentSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="see all"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="4dp"
+            android:background="#E6E6E6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/homeMenu"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:src="@drawable/home"
+                app:tint="@color/mGreen" />
+
+
+            <ImageView
+                android:id="@+id/menuSearch"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:src="@drawable/search"
+                app:tint="@color/mGray" />
+
+
+            <ImageView
+                android:id="@+id/menuAppointments"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:src="@drawable/booked"
+                app:tint="@color/mGray" />
+
+
+            <ImageView
+                android:id="@+id/menuProfile"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:src="@drawable/profile"
+                app:tint="@color/mGray" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

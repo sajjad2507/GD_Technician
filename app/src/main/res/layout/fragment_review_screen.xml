@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ReviewScreen">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- RatingBar to allow the user to provide a rating -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:stepSize="0.5"
+            android:numStars="5" />
+
+        <!-- EditText for the user to provide a review -->
+        <EditText
+            android:id="@+id/reviewEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Write your review..."
+            android:gravity="start|top"
+            android:lines="4"
+            android:maxLines="6"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine" />
+
+        <!-- Button to submit the rating and review -->
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:text="Submit Rating Review" />
+
+    </LinearLayout>
+
+</FrameLayout>

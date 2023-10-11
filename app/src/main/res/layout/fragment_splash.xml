@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Splash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="130dp"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Digital Technician"
+            android:textColor="@color/basic_black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/splash_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="A Digital Solution towards Daily Problem"
+        android:textColor="#2C2C2C"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+</FrameLayout>

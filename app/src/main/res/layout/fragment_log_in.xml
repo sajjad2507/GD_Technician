@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LogIn">
+
+    <View
+        android:layout_width="500dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/welcomeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:text="Welcome \nBack"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeTxt"
+            android:layout_marginStart="50dp"
+            android:text="Let’s start a new journey!"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/emailEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/passwordEdt"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edt"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="12dp"
+            android:hint="email here"
+            android:inputType="textEmailAddress"
+            android:padding="16dp" />
+
+
+        <EditText
+            android:id="@+id/passwordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/loginBtn"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edt"
+            android:drawableLeft="@drawable/pass"
+            android:drawablePadding="12dp"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/googleBtn"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/btn"
+            android:padding="12dp"
+            android:text="LogIn"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_above="@id/or"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="48dp"
+            android:background="#F8C431" />
+
+        <ImageView
+            android:id="@+id/googleBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@id/or"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/google" />
+
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/dontRegister"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="or"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/dontRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Don't have an account, Register"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
